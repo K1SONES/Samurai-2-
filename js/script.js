@@ -73,4 +73,7 @@ switch (num) {
   case 4:
     console.log("大吉です");
     break;
+  default:
+    console.log("末吉です");
+    break;
 }
