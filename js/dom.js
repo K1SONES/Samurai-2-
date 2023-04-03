@@ -1,4 +1,43 @@
-// head要素を取得し、中身を出力する
-console.log(document.head);
-// body要素を取得し、中身を出力する
-console.log(document.body);
+// // head要素を取得し、中身を出力する
+// console.log(document.head);
+// // body要素を取得し、中身を出力する
+// console.log(document.body);
+
+// // HTML要素をclassで取得し、中身を出力する
+// console.log(document.getElementsByClassName("heading"));
+
+// // 複数のHTML要素を取得し、定数に代入する
+// const headings = document.getElementsByClassName("heading");
+
+// // 複数のHTML要素を1つずつ取得し、中身を出力する
+// for (let i = 0; i < headings.length; i++) {
+//   console.log(headings[i]);
+// }
+// console.log(document.querySelector("h1"));
+// console.log(document.querySelector("#second-heading"));
+// console.log(document.querySelector(".list"));
+
+// output-btnというidを持つHTML要素を取得し、定数に代入する
+const btn = document.getElementById("output-btn");
+
+// HTML要素がクリックされたときにイベント処理を実行する
+btn.addEventListener("click", () => {
+  console.log("クリックされました！");
+});
+
+// add-btnというidを持つHTML要素を取得し、定数に代入する
+const addBtn = document.getElementById("add-btn");
+
+// parent-listというidを持つHTML要素を取得し、定数に代入する
+
+const parentList = document.getElementById("parent-list");
+
+// HTML要素がクリックされたときにイベント処理を実行する
+addBtn.addEventListener("click", () => {
+  // li要素を新しく作成する
+  const childList = document.createElement("li");
+  // 作成したli要素に「これはリスト要素です」というテキストを追加する
+  childList.textContent = "これはリスト要素です";
+  // 作成したli要素をul要素の子要素として末尾に追加する
+  parentList.appendChild(childList);
+});
