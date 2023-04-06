@@ -6,6 +6,8 @@ const untypedfield = document.getElementById("untyped");
 const typedfield = document.getElementById("typed");
 const wrap = document.getElementById("wrap");
 const start = document.getElementById("start");
+const count = document.getElementById("count");
+
 // 複数のテキストを格納する配列
 const textLists = [
   "Hello World",
@@ -82,10 +84,26 @@ const rankCheck = (score) => {};
 const gameOver = (id) => {};
 
 // カウントダウンタイマー
-const timer = () => {};
+const timer = () => {
+  // タイマー部分のHTML要素（p要素）を取得する
+  let time = count.textContent;
+
+  const id = setInterval(() => {
+    // カウントダウンする
+    time--;
+    count.textContent = time;
+
+    // カウントが0になったらタイマーを停止する
+    if (time <= 0) {
+      clearInterval(id);
+    }
+  }, 1000);
+};
 
 // ゲームスタート時の処理
 start.addEventListener("click", () => {
+  // カウントダウンタイマーを開始する
+  timer();
   // ランダムなテキストを表示する
   createText();
 
