@@ -5,6 +5,7 @@ let typed = "";
 const untypedfield = document.getElementById("untyped");
 const typedfield = document.getElementById("typed");
 const wrap = document.getElementById("wrap");
+const start = document.getElementById("start");
 // 複数のテキストを格納する配列
 const textLists = [
   "Hello World",
@@ -52,7 +53,6 @@ const createText = () => {
   untypedfield.textContent = untyped;
 };
 
-createText();
 // キー入力の判定
 const keyPress = (e) => {
   // 誤タイプの場合
@@ -84,5 +84,16 @@ const gameOver = (id) => {};
 // カウントダウンタイマー
 const timer = () => {};
 
-// キーボードのイベント処理
-document.addEventListener("keypress", keyPress);
+// ゲームスタート時の処理
+start.addEventListener("click", () => {
+  // ランダムなテキストを表示する
+  createText();
+
+  // 「スタート」ボタンを非表示にする
+  start.style.display = "none";
+
+  //キーボードのイベント処理
+  document.addEventListener("keypress", keyPress);
+});
+
+untypedfield.textContent = "スタートボタンで開始";
