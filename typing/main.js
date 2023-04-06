@@ -47,6 +47,7 @@ const createText = () => {
   untypedfield.textContent = untyped;
 };
 
+createText();
 // キー入力の判定
 const keyPress = (e) => {};
 
