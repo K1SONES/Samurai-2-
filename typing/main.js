@@ -84,7 +84,11 @@ const keyPress = (e) => {
 const rankCheck = (score) => {};
 
 // ゲームを終了
-const gameOver = (id) => {};
+const gameOver = (id) => {
+  clearInterval(id);
+
+  console.log("ゲーム終了！");
+};
 
 // カウントダウンタイマー
 const timer = () => {
@@ -98,7 +102,7 @@ const timer = () => {
 
     // カウントが0になったらタイマーを停止する
     if (time <= 0) {
-      clearInterval(id);
+      gameOver(id);
     }
   }, 1000);
 };
