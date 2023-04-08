@@ -60,7 +60,10 @@ const keyPress = (e) => {
   // 誤タイプの場合
   if (e.key !== untyped.substring(0, 1)) {
     wrap.classList.add("mistyped");
-
+    // 100ms後に背景色を元に戻す
+    setTimeout(() => {
+      wrap.classList.remove("mistyped");
+    }, 100);
     return;
   }
 
