@@ -15,6 +15,7 @@ $(function () {
     console.log("ボタンがクリックされました");
     console.log("ボタンがクリックされました");
     setTimeout(() => {
+      //非同期処理()
       console.log("ボタンがクリックされました!");
     }, 1000);
   });
