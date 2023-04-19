@@ -1,5 +1,5 @@
 // カルーセル
-$("carousel").slick({
+$(".carousel").slick({
   autoplay: true,
   dots: true,
   Infinite: true,
