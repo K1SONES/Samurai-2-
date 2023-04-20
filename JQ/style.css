@@ -23,6 +23,11 @@ nav a {
   font-family: "Noto Sans JP", sans-serif;
 }
 
+section {
+  opacity: 0;
+  transition: 1000ms;
+}
+
 /* ナビゲーションメニューのMyProfileの部分 */
 .home {
   border: 1px solid black;
@@ -152,7 +157,9 @@ footer p {
   position: fixed;
   bottom: 38px;
   right: 20px;
+  opacity: 0;
 }
 .top-btn {
-  display: none;
+  opacity: 1;
+  transition: 1000ms;
 }

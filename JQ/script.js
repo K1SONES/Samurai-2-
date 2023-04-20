@@ -20,10 +20,20 @@ $(".carousel").slick({
 // topに戻るボタン
 $(function () {
   $(window).scroll(function () {
-    if ($(window).scrollTop() < 100) {
+    if ($(window).scrollTop() > 100) {
       $("#back-btn").addClass("top-btn");
     } else {
       $("#back-btn").removeClass("top-btn");
+    }
+  });
+});
+// スクロール時にセクションをフェードイン
+$(function () {
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 300) {
+      $("section").addClass("top-btn");
+    } else {
+      $("section").removeClass("top-btn");
     }
   });
 });
