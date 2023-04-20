@@ -16,3 +16,14 @@ $(".carousel").slick({
   autoplaySpeed: 5000,
   arrows: false,
 });
+
+// topに戻るボタン
+$(function () {
+  $(window).scroll(function () {
+    if ($(window).scrollTop() < 100) {
+      $("#back-btn").addClass("top-btn");
+    } else {
+      $("#back-btn").removeClass("top-btn");
+    }
+  });
+});
