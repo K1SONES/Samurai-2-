@@ -1,5 +1,5 @@
 // リンクのホバー時に不透明度をアニメーションで変更する
-$("a").hover(
+$(".home, .fade").hover(
   function () {
     $(this).animate({ opacity: 0.5 }, 500);
   },
@@ -19,21 +19,26 @@ $(".carousel").slick({
 
 // topに戻るボタン
 $(function () {
+  $("#back-btn").on("click", () => {
+    $("body,html").animate({ scrollTop: 0 }, 1000);
+    return false;
+  });
   $(window).scroll(function () {
     if ($(window).scrollTop() > 100) {
-      $("#back-btn").addClass("top-btn");
+      $("#back-btn").fadeIn();
     } else {
-      $("#back-btn").removeClass("top-btn");
+      $("#back-btn").fadeOut();
     }
   });
-});
-// スクロール時にセクションをフェードイン
-$(function () {
+
+  // スクロール時にセクションをフェードイン
+
   $(window).scroll(function () {
     if ($(window).scrollTop() > 300) {
-      $("section").addClass("top-btn");
+      $("section").addClass("section-fadein");
     } else {
-      $("section").removeClass("top-btn");
+      $("section").removeClass("section-fadein");
     }
   });
+  //リンクにスクロール
 });

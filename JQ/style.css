@@ -157,9 +157,13 @@ footer p {
   position: fixed;
   bottom: 38px;
   right: 20px;
-  opacity: 0;
 }
-.top-btn {
+.backbtn-fadein {
+  opacity: 1;
+  transition: 1000ms;
+}
+
+.section-fadein {
   opacity: 1;
   transition: 1000ms;
 }
