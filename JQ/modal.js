@@ -1,10 +1,11 @@
 const modal = $("#js-modal");
 const overlay = $("#js-overlay");
 const close = $("#js-close");
-const open = $("#js-open");
+const open = $("img");
 
 open.on("click", function () {
   //ボタンをクリックしたら
+  console.log($(this)[0]);
   modal.addClass("open"); // modalクラスにopenクラス付与
   overlay.addClass("open"); // overlayクラスにopenクラス付与
 });
