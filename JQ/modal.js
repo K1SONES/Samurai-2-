@@ -5,7 +5,7 @@ const open = $("img");
 
 open.on("click", function () {
   //ボタンをクリックしたら
-  console.log($(this)[0]);
+  $("#targetImg").attr("src", $(this)[0].scr);
   modal.addClass("open"); // modalクラスにopenクラス付与
   overlay.addClass("open"); // overlayクラスにopenクラス付与
 });
